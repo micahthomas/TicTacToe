@@ -3,13 +3,18 @@ import os
 from variables import *
 
 def call(functionName):
-	#just a quick idea that came to helps me understand where and why the program crashed
+	#just a quick idea that helps me understand where and why the program crashed
 	print "DEBUG: " + functionName + "() has been called"
 	result = globals()[functionName]()
 	print "DEBUG: " + functionName + "() has exited with: " + str(result)
 	return result
 
-#TODO: make a printError() function
+def printError(error):
+	drawBoard();
+	print "\nERROR:\n"
+	for (i in error)
+		print "\t" + i
+	print "\n"
 
 def clearScreen():
     os.system(['clear','cls'][os.name == 'nt'])
