@@ -28,7 +28,7 @@ def printIntro():
 	clearScreen()
 	print clearLineLarge
 	print "Program: TiCTaCToE"
-	print "Version: 1.9" # i wanted to make it look stable :-)
+	print "Version: 2.0" # i wanted to make it look stable :-)
 	print "Author: Micah Thomas"
 	print clearLineLarge
 	print "This Is A 2 Player Game, Find Another Player Now!"
