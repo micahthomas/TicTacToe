@@ -1,6 +1,6 @@
 # TicTacToe/main.py
 
-from functions import *
+from functions import printIntro, printMenu, game, resetVariables
 
 printIntro(); # prints introduction
 print "Would You Like To Play The Game?"

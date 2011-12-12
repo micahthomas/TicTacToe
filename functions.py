@@ -14,11 +14,14 @@ def buffInput(question):
 	# @description: function for checking if input is quit, otherwise return
 	# the input (custom input function)
 	# @return: the raw_input
-	raw_input_var = raw_input(question)
-	if (raw_input_var == "Quit"):
+	raw_input_var = raw_input(question).lower()
+	if (raw_input_var == "quit"):
 		os._exit(0)	# quits the program with exit code 0
 	else:
-		return raw_input_var
+		try:
+			return raw_input_var[0]
+		except:
+			return "" # if raw_input_var was empty return ""
 
 def printIntro():
 	# @description: function for printing Introduction message
@@ -34,11 +37,12 @@ def printMenu():
 	# @description: function for printing the Basic Menu for starting the Game
 	# @return:	1: if ans == y/Y
 	#			2: exceptions
-	ans = buffInput("(ENTER: y/n) => ")
-	if (ans == "y" or ans == "Y"):
+	ans = ""
+	while (ans not in ["y","n"]):
+		ans = buffInput("(ENTER: y/n) => ").lower()
+	if (ans == "y"):
 		return 1
-	else:
-		return 0
+	return 0
 
 def printError(error):
 	# @description: function for a uniform and distinguishable formatting for
