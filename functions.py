@@ -83,6 +83,16 @@ def boxIsMarked(box, player):
 	else:
 		return 0
 
+def boxIsEmpty(box):
+	# @description: function for checking if box is empty
+	# @params: box: the number of the boxes
+	# @return:	1: if box is not Empty
+	#			0: if box is empty
+	if (boxes[box-1] in [player1["symbol"], player2["symbol"]]):
+		return 1
+	else:
+		return 0
+
 def markBox(box, player):
 	# @description: function for marking the box if its not already marked
 	# @params:	box: the number of the box
@@ -95,7 +105,7 @@ def markBox(box, player):
 	else:
 		mark = player2["symbol"]
 		player = 1
-	if (not boxIsMarked(box, player)):
+	if (not boxIsEmpty(box)):
 		box -= 1
 		boxes[box] = mark
 		return 1
