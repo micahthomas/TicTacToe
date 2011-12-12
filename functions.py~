@@ -15,7 +15,7 @@ def buffInput(question):
 	# the input (custom input function)
 	# @return: the raw_input
 	raw_input_var = raw_input(question)
-	if (raw_input_var == "Quit"):
+	if (raw_input_var == "quit"):
 		os._exit(0)	# quits the program with exit code 0
 	else:
 		return raw_input_var
