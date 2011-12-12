@@ -1,6 +1,11 @@
-#main.py
+# TicTacToe/main.py
+
 from functions import *
 
-call("printIntro");
-call("printMenu");
-call("gameLoop");
+printIntro(); # prints introduction
+print "Would You Like To Play The Game?"
+menu = printMenu();
+while (menu == 1):
+	game();
+	menu = printMenu();
+	resetVariables();
